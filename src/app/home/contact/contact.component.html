@@ -1,0 +1,112 @@
+
+<div class="container">
+  <mat-toolbar>
+ <mat-menu #menu="matMenu">
+  <button mat-menu-item>Home</button>
+  <button mat-menu-item>Login</button>
+  <button mat-menu-item>Contact Us</button>
+
+</mat-menu>
+<span><mat-icon >face</mat-icon> Blog</span>
+    <span class="example-spacer"></span>
+
+    <mat-toolbar>
+        <a mat-button routerLink="/home">Home</a>
+        <a mat-button routerLink="/login">Login</a>
+        <a mat-button routerLink="/contact">Contact Us</a>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+    <button mat-icon-button  matTooltip="favorite" class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button matTooltip="share" class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+
+</div>
+<br>
+<mat-divider></mat-divider>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 mt-5" style="display: flex; justify-content: center; align-items: center;">
+      <mat-card>
+        <mat-card-title style="text-align:center;">
+          <h2>Contact Us</h2>
+        </mat-card-title>
+        <br>
+        <mat-card-content>
+          <form>
+            <mat-form-field class="example-full-width">
+              <mat-label>Name</mat-label>
+              <input
+              matInput
+              placeholder="Jane Doe"
+              required
+              name="name"
+              ngModel
+              #name="ngModel">
+              <mat-error *ngIf="name.invalid"> Name is required</mat-error>
+            </mat-form-field>
+<br>
+            <mat-form-field class="example-full-width">
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                placeholder="example@gmail.com"
+                required
+                name="email"
+                ngModel
+                #email="ngModel">
+                <mat-error *ngIf="email.invalid">Email is required</mat-error>
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+<br>
+            <mat-form-field class="example-full-width">
+              <mat-label>Telephone</mat-label>
+              <span matTextPrefix>+90 &nbsp;</span>
+              <input type="tel" matInput placeholder="555-555-1234">
+              <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field>
+<br>
+               <mat-form-field class="example-full-width">
+               <mat-label>Leave a comment</mat-label>
+              <textarea matInput placeholder="It makes me feel..."></textarea>
+            </mat-form-field>
+
+<br>
+            <button mat-raised-button
+            color="primary"
+            class="login-button" type="submit">Send Message</button>
+<br>
+
+
+          </form>
+        </mat-card-content>
+<br>
+    <mat-card-footer>
+      <div fxLayout="row" fxLayoutAlign="end center">
+        <a mat-button matTooltip="Facebook"  [href]="shareOnFacebook()" target="_blank">
+          <img src="assets/facebook.png" alt="Facebook">
+        </a>
+        <a mat-button matTooltip="Twitter" [href]="shareOnTwitter()" target="_blank">
+          <img src="assets/twitter-icon.png" alt="Twitter">
+        </a>
+        <a mat-button matTooltip="Linkedln" [href]="shareOnLinkedIn()" target="_blank">
+          <mat-icon>linkedin</mat-icon>
+        </a>
+        <a mat-button matTooltip="WhatsApp" [href]="shareOnWhatsApp()" target="_blank">
+          <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+        </a>
+      </div>
+    </mat-card-footer>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<mat-divider></mat-divider>

@@ -1,0 +1,25 @@
+.mat-mdc-card-header {
+  justify-content: center;
+}
+.mdc-card__actions {
+  justify-content: space-between;
+}
+.mat-form-field {
+  margin-right: 12px;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+.navbar{
+  justify-content: space-between;
+}
+span{
+  padding-right: 1rem;
+}
+.spacer
+{
+  flex: auto;
+}
